@@ -1,0 +1,53 @@
+/* src/components/Home.css */
+
+/* กำหนดให้ Container ครอบคลุมพื้นที่ทั้งหมด */
+.home-container {
+  display: flex;
+  justify-content: center; /* จัดกลางในแนวนอน */
+  align-items: center;     /* จัดกลางในแนวตั้ง */
+  height: 100vh;           /* ความสูงเต็มหน้าจอ */
+  width: 100%;             /* ความกว้างเต็มหน้าจอ */
+  text-align: center;      /* จัดข้อความให้กึ่งกลาง */
+  flex-direction: column;  /* เพิ่มการจัดตำแหน่งในแนวตั้ง */
+}
+
+.home-content {
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid #333; /* กรอบสีดำ, หนา 2px */
+  padding: 20px;           /* เพิ่มระยะห่างภายในกรอบ */
+  border-radius: 10px;     /* ทำมุมให้โค้ง */
+  background-color: #f9f9f9; /* พื้นหลังภายในกรอบ */
+}
+
+h1, h2, p {
+  margin: 10px 0;  /* ให้แต่ละบรรทัดมีระยะห่าง */
+}
+
+.home-content img {
+    width: 150px;  /* ปรับขนาดโลโก้ */
+    height: 150px;
+    margin-bottom: 20px; /* เพิ่มระยะห่างจากข้อความ */
+}
+
+/* เพิ่ม CSS สำหรับการทำให้โลโก้เป็นวงกลม */
+.logo {
+    width: 100px;          /* กำหนดขนาดของวงกลม */
+    height: 100px;         /* กำหนดขนาดของวงกลม */
+    border-radius: 50%;    /* ทำให้เป็นวงกลม */
+    object-fit: cover;     /* ให้โลโก้แสดงอย่างถูกต้องภายในกรอบ */
+    border: 4px solid #4CAF50; /* กรอบสีเขียว */
+    margin-bottom: 20px;   /* เพิ่มระยะห่างจากข้อความ */
+    animation: spin 5s linear infinite;  /* ทำให้โลโก้หมุน */
+  }
+  
+  /* การสร้างแอนิเมชันหมุน */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); /* เริ่มต้นที่มุม 0 องศา */
+    }
+    100% {
+      transform: rotate(360deg); /* หมุนไปจนถึง 360 องศา */
+    }
+  }
+  

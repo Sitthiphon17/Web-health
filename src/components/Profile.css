@@ -1,0 +1,81 @@
+/* src/components/Profile.css */
+
+/* เพิ่มการจัดตำแหน่งโลโก้ที่มุมซ้ายสุดของหน้าเว็บและหมุน */
+.logo-container {
+  position: fixed;  /* ทำให้โลโก้อยู่ที่ตำแหน่งคงที่เมื่อเลื่อนหน้าเว็บ */
+  top: 10px;  /* ห่างจากด้านบน */
+  left: 10px; /* ห่างจากด้านซ้าย */
+  animation: rotateLogo 5s infinite linear;  /* การหมุนโลโก้ */
+  z-index: 10;  /* เพื่อให้โลโก้แสดงอยู่ข้างหน้าทุกอย่าง */
+}
+
+.logo {
+  width: 50px; /* ขนาดโลโก้ */
+  height: 50px;
+  border-radius: 50%; /* ทำให้โลโก้เป็นวงกลม */
+}
+
+/* การหมุนโลโก้ */
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* สไตล์สำหรับฟอร์มกรอกข้อมูลส่วนตัว */
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+/* กำหนดให้ทุก input อยู่ในแถวเดียวกันและยาวเท่ากัน */
+.input-group {
+  display: flex;
+  align-items: center;  /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 10px; /* ช่องว่างระหว่าง label และ input */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 30%; /* กำหนดความกว้างของ label */
+  text-align: right;
+  white-space: nowrap;
+}
+
+input {
+  flex-grow: 1; /* ให้ input ขยายเต็มพื้นที่ที่เหลือ */
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* ทำให้ padding ไม่ทำให้ขนาด input เกินไป */
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}

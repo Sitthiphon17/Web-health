@@ -1,0 +1,67 @@
+/* ทำให้ html และ body ครอบคลุมพื้นที่ทั้งหมดของหน้าจอ */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center; /* จัดแนวตรงกลางแนวนอน */
+  align-items: center; /* จัดแนวตรงกลางแนวตั้ง */
+}
+
+/* จัดตำแหน่งให้ .App อยู่ตรงกลาง */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* จัดเนื้อหาให้ตรงกลางแนวตั้ง */
+  align-items: center; /* จัดเนื้อหาให้ตรงกลางแนวนอน */
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+/* สไตล์ข้อความต้อนรับ */
+.welcome-message h1 {
+  color: #4CAF50;
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.welcome-message h2 {
+  color: #007BFF;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.welcome-message p {
+  color: #555;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* สไตล์ปุ่ม */
+.login-button {
+  padding: 12px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  background-color: #218838;
+}
+
+/* กำหนดให้ Container ครอบคลุมพื้นที่ทั้งหมด */
+.home-container {
+  display: flex;
+  justify-content: center; /* จัดกลางในแนวนอน */
+  align-items: center;     /* จัดกลางในแนวตั้ง */
+  height: 100vh;           /* ความสูงเต็มหน้าจอ */
+  text-align: center;      /* จัดข้อความให้กึ่งกลาง */
+}
+
+.home-content {
+  font-size: 24px;
+  font-weight: bold;
+}

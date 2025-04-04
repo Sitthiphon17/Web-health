@@ -1,0 +1,101 @@
+/* เพิ่มการจัดตำแหน่งโลโก้ที่มุมซ้ายสุดของหน้าเว็บและหมุน */
+.logo-container {
+    position: fixed;  /* ทำให้โลโก้อยู่ที่ตำแหน่งคงที่เมื่อเลื่อนหน้าเว็บ */
+    top: 10px;  /* ห่างจากด้านบน */
+    left: 10px; /* ห่างจากด้านซ้าย */
+    animation: rotateLogo 5s infinite linear;  /* การหมุนโลโก้ */
+    z-index: 10;  /* เพื่อให้โลโก้แสดงอยู่ข้างหน้าทุกอย่าง */
+  }
+  
+  .logo {
+    width: 50px; /* ขนาดโลโก้ */
+    height: 50px;
+    border-radius: 50%; /* ทำให้โลโก้เป็นวงกลม */
+  }
+  
+  /* การหมุนโลโก้ */
+  @keyframes rotateLogo {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* สไตล์ทั่วไปสำหรับฟอร์มล็อกอิน */
+  .login-container {
+    width: 900px;  /* เพิ่มความกว้างจาก 300px เป็น 800px */
+    max-width: 80%;  /* ป้องกันไม่ให้กว้างเกินไปบนหน้าจอเล็ก */
+    margin: 0 auto;
+    padding: 30px; /* เพิ่ม padding ให้กว้างขึ้น */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: bold;
+    min-width: 170px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  
+  input {
+    flex: 1;
+    width: 100%;
+    padding: 8px;
+    margin-top: 1px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+  }
+
+  .input-group label {
+    min-width: 180px; /* ทำให้ label กว้างเท่ากันทุกช่อง */
+    text-align: right;
+    font-weight: bold;
+    white-space: nowrap;
+}
+  
+  .input-group input {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
